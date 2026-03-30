@@ -3380,7 +3380,7 @@ impl RequestHandler for Vmm {
 
     fn vm_boot(&mut self) -> result::Result<(), VmError> {
         tracer::start();
-        info!("Booting VM");
+        info!("Booting VM with v2 profile");
         event!("vm", "booting");
 
         if matches!(self.vm, MaybeVmOwnership::Migration(_)) {
